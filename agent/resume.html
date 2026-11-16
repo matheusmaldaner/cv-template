@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your Name, CV</title>
+<!--
+  Academic CV template. Open in a browser and print to PDF (Ctrl+P / Cmd+P, Save as PDF, paper size Letter).
+  Every section is a <section>; delete the ones you do not need.
+  Rules: one line per bullet, numbers over adjectives, your name in <strong> in author lists.
+-->
+<style>
+  :root { --link: #357edd; }
+  * { box-sizing: border-box; }
+  html { font-size: 15px; }
+  body { margin: 0; background: #e9e9e9; color: #000; font-family: Georgia, "Gelasio", "Times New Roman", serif; line-height: 1.3; }
+  main { background: #fff; max-width: 8.5in; margin: 1.5rem auto; padding: 0.5in; box-shadow: 0 2px 14px rgba(0,0,0,.18); }
+  a { color: var(--link); text-decoration: none; }
+
+  header { text-align: center; margin-bottom: 0.35rem; }
+  h1 { font-size: 1.55rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; margin: 0; }
+  .contact { font-size: 0.8rem; margin: 0.1rem 0 0; }
+  .contact .sep { margin: 0 0.35rem; }
+
+  section { margin-top: 0.4rem; }
+  h2 { font-size: 0.92rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; margin: 0.35rem 0 0.15rem; padding-bottom: 0.04rem; border-bottom: 1.2px solid #000; break-after: avoid; }
+  h3 { font-size: 0.9rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin: 0.9rem 0 0.2rem; break-after: avoid; }
+  h2 + h3 { margin-top: 0.35rem; }
+  .text { font-size: 0.85rem; margin: 0.1rem 0 0; text-align: justify; }
+
+  /* entry: organization + place, role + dates, optional mentors, bullets */
+  .entry { margin: 0.14rem 0 0.3rem; break-inside: avoid; }
+  .row { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; }
+  .org { font-weight: 700; font-size: 0.92rem; }
+  .role { font-style: italic; font-size: 0.86rem; }
+  .meta { font-size: 0.8rem; white-space: nowrap; }
+  .mentors { font-size: 0.8rem; font-style: italic; margin-top: 0.02rem; }
+  .tech { font-weight: 400; font-style: italic; font-size: 0.82rem; margin-left: 0.35rem; }
+  .project .org { font-size: 1rem; }
+  ul.bullets { margin: 0.06rem 0 0; padding: 0; list-style: none; }
+  ul.bullets li { position: relative; padding-left: 0.62rem; font-size: 0.85rem; margin: 0.02rem 0; }
+  ul.bullets li::before { content: ''; position: absolute; left: 0; top: 0.45em; width: 0.36rem; height: 0.36rem; border-radius: 50%; background: currentColor; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+  /* publications: the [tag] hangs into the margin */
+  ol.pubs { list-style: none; margin: 0.05rem 0 0.28rem; padding: 0; }
+  ol.pubs li { font-size: 0.85rem; margin: 0.12rem 0; padding-left: 1.7rem; text-indent: -1.7rem; }
+  .tag { font-weight: 700; }
+
+  /* one-line lists with the year on the right */
+  ul.lines { list-style: none; margin: 0.08rem 0 0; padding: 0; }
+  ul.lines li { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; font-size: 0.84rem; margin: 0.05rem 0; }
+
+  .skills p { font-size: 0.82rem; margin: 0.1rem 0; line-height: 1.35; }
+  .refs { display: grid; grid-template-columns: repeat(3, auto); justify-content: space-between; gap: 0.4rem 1rem; margin-top: 0.15rem; font-size: 0.78rem; }
+
+  @page { size: letter; margin: 0.42in; }
+  @media print {
+    html { font-size: 10.3pt; line-height: 1.25; }
+    body { background: #fff; }
+    main { max-width: none; margin: 0; padding: 0; box-shadow: none; }
+    a { color: #000; }
+    .contact a, .media a { color: var(--link); }
+    h2 { margin: 0.6rem 0 0.1rem; }
+    h3 { margin: 0.65rem 0 0.2rem; }
+  }
+</style>
+</head>
+<body>
+<main>
+
+<header>
+  <h1>Your Name</h1>
+  <p class="contact">
+    <a href="mailto:you@university.edu">you@university.edu</a><span class="sep">|</span>
+    <a href="https://yourwebsite.com">yourwebsite.com</a><span class="sep">|</span>
+    <a href="https://github.com/yourusername">github.com/yourusername</a>
+  </p>
+</header>
+
+<section>
+  <h2>Research Interests</h2>
+  <p class="text">I study how to (one sentence on the big question you care about), drawing on (two or three fields). I build (what you make: benchmarks, systems, models) that test (the specific problems). I am also interested in (one adjacent direction you want to explore in grad school).</p>
+</section>
+
+<section>
+  <h2>Academic</h2>
+  <div class="entry">
+    <div class="row"><span class="org">University Name</span><span class="meta">City, ST</span></div>
+    <div class="row"><span class="role">M.S. in Your Field</span><span class="meta">Aug. 2025 – Present</span></div>
+    <ul class="bullets"><li>GPA: 4.0/4.0</li></ul>
+  </div>
+  <div class="entry">
+    <div class="row"><span class="org">University Name</span><span class="meta">City, ST</span></div>
+    <div class="row"><span class="role">B.S. in Your Major, Minor in Your Minor, Certificate</span><span class="meta">Aug. 2021 – May 2025</span></div>
+    <ul class="bullets"><li>GPA: 3.9/4.0, Summa Cum Laude</li></ul>
+  </div>
+</section>
+
+<section>
+  <h2>Publications</h2>
+  <h3>Journal Articles</h3>
+  <ol class="pubs">
+    <li><span class="tag">[J1]</span> A. Coauthor, <strong>Your Name</strong>, B. Coauthor, et al. Paper Title in Title Case. <em>Journal Name (Publisher)</em>, 2025.</li>
+  </ol>
+  <h3>Conference, Workshop &amp; Demo Papers</h3>
+  <ol class="pubs">
+    <li><span class="tag">[C2]</span> <strong>Your Name</strong>, A. Coauthor, B. Coauthor, et al. Paper Title in Title Case. <em>VENUE (Track)</em>, 2026.</li>
+    <li><span class="tag">[C1]</span> A. Coauthor, <strong>Your Name</strong>, B. Coauthor, et al. Paper Title in Title Case. <em>VENUE</em>, 2025. (Best Paper)</li>
+  </ol>
+  <h3>Preprints &amp; Under Review</h3>
+  <ol class="pubs">
+    <li><span class="tag">[P1]</span> <strong>Your Name</strong>, A. Coauthor, B. Coauthor, et al. Paper Title in Title Case. <em>arXiv:0000.00000</em>, 2026.</li>
+  </ol>
+  <h3>Thesis</h3>
+  <ol class="pubs">
+    <li><strong>Your Name</strong>. Thesis Title in Title Case. <em>Undergraduate Thesis, University Name</em>, 2025.</li>
+  </ol>
+</section>
+
+<section>
+  <h2>Professional Experience</h2>
+  <div class="entry">
+    <div class="row"><span class="org">Company Name</span><span class="meta">City, ST</span></div>
+    <div class="row"><span class="role">Incoming Research Intern</span><span class="meta">Jan. 2027 – Apr. 2027</span></div>
+    <ul class="bullets"><li>One line on what you will work on and who you report to</li></ul>
+  </div>
+  <div class="entry">
+    <div class="row"><span class="org">Research Lab, Group Name</span><span class="meta">City, ST</span></div>
+    <div class="row"><span class="role">Research Intern</span><span class="meta">May 2025 – Apr. 2026</span></div>
+    <div class="mentors">Mentor: Dr. First Last, Dr. First Last</div>
+    <ul class="bullets">
+      <li>First-author of a benchmark or system, with one concrete number</li>
+      <li>Co-author of a second project, with a measure of impact (users, stars, citations)</li>
+      <li>One more result, in one line</li>
+    </ul>
+  </div>
+  <div class="entry">
+    <div class="row"><span class="org">University Name, Lab or Institute</span><span class="meta">City, ST</span></div>
+    <div class="row"><span class="role">Research Assistant</span><span class="meta">Aug. 2023 – May 2026</span></div>
+    <div class="mentors">Mentor: Dr. First Last</div>
+    <ul class="bullets">
+      <li>What you researched, in plain words</li>
+      <li>What you built or optimized</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>Leadership</h2>
+  <div class="entry">
+    <div class="row"><span class="org">Student Organization</span><span class="meta">City, ST</span></div>
+    <div class="row"><span class="role">President (Apr. 2024 – May 2026); Workshop Director (Apr. 2023 – Apr. 2024)</span><span class="meta">Apr. 2023 – May 2026</span></div>
+    <ul class="bullets">
+      <li>Size of the team you led and who you partnered with</li>
+      <li>Money raised or members grown, with numbers</li>
+      <li>An award the organization won</li>
+    </ul>
+  </div>
+  <div class="entry">
+    <div class="row"><span class="org">Club Name</span><span class="meta">City, ST</span></div>
+    <div class="row"><span class="role">Co-Founder</span><span class="meta">Aug. 2024 – Present</span></div>
+    <ul class="bullets"><li>What you started and why it matters</li></ul>
+  </div>
+</section>
+
+<section>
+  <h2>Presentations and Posters</h2>
+  <h3>Talks</h3>
+  <ul class="lines">
+    <li><span><span class="tag">[T2]</span> Talk Title, <strong>Event or Host, University</strong> (Invited speaker)</span><span class="meta">2026</span></li>
+    <li><span><span class="tag">[T1]</span> Talk Title, <strong>Event or Host, University</strong> (Guest talk)</span><span class="meta">2025</span></li>
+  </ul>
+  <h3>Workshops</h3>
+  <ul class="lines">
+    <li><span><span class="tag">[W1]</span> Workshop Title, <strong>Student Organization, University</strong></span><span class="meta">2024</span></li>
+  </ul>
+  <h3>Posters</h3>
+  <ul class="lines">
+    <li><span><span class="tag">[PS2]</span> Poster title, <strong>Symposium 2026; Conference 2025</strong></span><span class="meta">2025 – 2026</span></li>
+    <li><span><span class="tag">[PS1]</span> Poster title, <strong>Research Symposium 2024</strong></span><span class="meta">2024</span></li>
+  </ul>
+</section>
+
+<section class="skills">
+  <h2>Technical Skills</h2>
+  <p><strong>Programming &amp; AI/ML:</strong> Python, JavaScript, C++, SQL, PyTorch, TensorFlow, scikit-learn</p>
+  <p><strong>Frameworks &amp; Tools:</strong> React, Node.js, Docker, REST APIs, Linux</p>
+  <p><strong>Certifications:</strong> Certification Name (Code), Certification Name (Code)</p>
+  <p><strong>Languages:</strong> English (Fluent), Spanish (Conversational)</p>
+</section>
+
+<section>
+  <h2>Select Projects</h2>
+  <div class="entry project">
+    <div class="row"><span><span class="org">Project One</span><span class="tech">Python, FastAPI, Docker</span></span><span class="meta">2026</span></div>
+    <ul class="bullets"><li>One line on what it does and who uses it</li></ul>
+  </div>
+  <div class="entry project">
+    <div class="row"><span><span class="org">Project Two</span><span class="tech">TypeScript, React</span></span><span class="meta">2025</span></div>
+    <ul class="bullets"><li>One line, with a result (stars, users, a prize)</li></ul>
+  </div>
+</section>
+
+<section>
+  <h2>Honors and Awards</h2>
+  <ul class="lines">
+    <li><span><strong>Fellowship or Award Name</strong>: One line on what it is or how selective</span><span class="meta">2026</span></li>
+    <li><span>Award Name: 1 of N selected</span><span class="meta">2025</span></li>
+    <li><span>Dean's List: All semesters</span><span class="meta">2021 – 2025</span></li>
+  </ul>
+</section>
+
+<section>
+  <h2>Hackathons and Competitions</h2>
+  <ul class="lines">
+    <li><span>Hackathon Name, <strong>1st Place Overall</strong> for what you built</span><span class="meta">2025</span></li>
+    <li><span>Competition Name, Best Visualization for what you analyzed</span><span class="meta">2024</span></li>
+  </ul>
+</section>
+
+<section class="media">
+  <h2>Select Media Coverage</h2>
+  <ul class="lines">
+    <li><span><a href="https://example.com">Outlet Name</a>, “Article Headline About You”</span><span class="meta">2026</span></li>
+    <li><span><a href="https://example.com">Department News</a>, “Article Headline About You”</span><span class="meta">2025</span></li>
+  </ul>
+</section>
+
+<section>
+  <h2>Service</h2>
+  <h3>Reviewing</h3>
+  <ul class="lines"><li><span>Reviewer, <strong>VENUE</strong> (Organization)</span><span class="meta">2025</span></li></ul>
+  <h3>Organizing</h3>
+  <ul class="lines"><li><span>Lead Organizer, <strong>Event Name</strong>, Host Organization</span><span class="meta">2026</span></li></ul>
+  <h3>Mentoring</h3>
+  <ul class="lines"><li><span>Mentee Name, Undergraduate Student, Major</span><span class="meta">2025 – Present</span></li></ul>
+</section>
+
+<section>
+  <h2>Grants and Funding</h2>
+  <ul class="lines">
+    <li><span>Fellowship Name, <strong>$00,000</strong> for what it funds</span><span class="meta">2026</span></li>
+    <li><span>Scholarship Name, <strong>$0,000</strong> for what it funds</span><span class="meta">2024</span></li>
+    <li><span>Travel Award, <strong>$000</strong> for presenting at a conference</span><span class="meta">2025</span></li>
+  </ul>
+</section>
+
+<section>
+  <h2>Misc and Hobbies</h2>
+  <p class="text">A few things you do outside research, in one or two sentences (what you cook, read, train for, or are learning).</p>
+</section>
+
+<section>
+  <h2>References</h2>
+  <div class="refs">
+    <div><strong>Dr. First Last</strong><br>Professor<br>University Name<br><a href="https://university.edu">university.edu/people/first-last</a></div>
+    <div><strong>Dr. First Last</strong><br>Senior Researcher<br>Company Name<br><a href="https://website.com">website.com</a></div>
+    <div><strong>Dr. First Last</strong><br>Associate Professor<br>University Name<br><a href="https://university.edu">university.edu/people/first-last</a></div>
+  </div>
+</section>
+
+</main>
+</body>
+</html>

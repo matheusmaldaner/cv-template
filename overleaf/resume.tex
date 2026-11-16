@@ -1,0 +1,174 @@
+% Academic CV template (pdfLaTeX, works as-is on Overleaf)
+% Replace the placeholder text, delete the sections you do not need.
+% Tip: keep one line per bullet and one fact per line.
+
+\documentclass[10pt,letterpaper]{article}
+
+\usepackage[T1]{fontenc}
+% Gelasio is a free font metric-compatible with Georgia (on Overleaf by default);
+% older TeX installs without it fall back to Charter
+\IfFileExists{gelasio.sty}{\usepackage[osf]{gelasio}}{\usepackage[osf]{XCharter}}
+\usepackage[margin=0.45in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage[explicit]{titlesec}
+\usepackage{iftex}
+% letter-spaced caps (pdfLaTeX, Overleaf's default compiler); plain caps elsewhere
+\ifPDFTeX\usepackage[letterspace=50]{microtype}\newcommand{\spaced}[2][50]{\textls[#1]{#2}}
+\else\usepackage{microtype}\newcommand{\spaced}[2][50]{#2}\fi
+
+\definecolor{linkblue}{HTML}{357EDD}
+\pagestyle{empty}
+\frenchspacing
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\renewcommand{\baselinestretch}{1.0}
+\AtBeginDocument{\fontsize{9.2}{11.4}\selectfont}
+
+% ---------- helpers ---------------------------------------------------------
+\newcommand{\meta}[1]{{\fontsize{8.4}{10}\selectfont #1}}
+\newcommand{\weblink}[2]{\href{#1}{\textcolor{linkblue}{#2}}}
+\newcommand{\me}[1]{\textbf{#1}}   % your name in author lists
+
+% SECTION: uppercase title with a rule under it
+\titleformat{\section}{\fontsize{9.8}{12}\selectfont\bfseries}{}{0pt}{\spaced[50]{\MakeUppercase{#1}}}[{\vspace{1pt}\titlerule[0.8pt]}]
+\titlespacing*{\section}{0pt}{8pt}{3pt}
+% SUBSECTION: smaller uppercase group label (Talks, Posters, ...)
+\titleformat{\subsection}{\fontsize{9.4}{12}\selectfont\bfseries}{}{0pt}{\spaced[110]{\MakeUppercase{#1}}}
+\titlespacing*{\subsection}{0pt}{7pt}{2pt}
+
+% bullets: small dot, no indent
+\setlist[itemize]{leftmargin=0.8em, labelsep=0.3em, itemsep=0pt, parsep=0pt, topsep=1pt, partopsep=0pt,
+  label={\raisebox{0.05ex}{\scalebox{0.95}{\textbullet}}}}
+
+% \entry{Organization}{Place}{Role}{Dates}
+\newcommand{\entry}[4]{%
+  \vspace{2pt}{\fontsize{9.8}{12}\selectfont\textbf{#1}}\hfill\meta{#2}\\
+  \textit{#3}\hfill\meta{#4}\par}
+% \mentors{Mentor: Dr. First Last}
+\newcommand{\mentors}[1]{{\fontsize{8.6}{10.5}\selectfont\textit{#1}}\par}
+% \pub{tag}{authors, title, venue, year}: the [tag] hangs into the margin
+\newcommand{\pub}[2]{\hangindent=2.2em\hangafter=1\textbf{[#1]} #2\par\vspace{1.5pt}}
+% \dated{text}{date}: one line with the date pushed right
+\newcommand{\dated}[2]{#1\hfill\meta{#2}\par\vspace{1pt}}
+% \project{Name}{tech stack}{year}
+\newcommand{\project}[3]{%
+  \vspace{2pt}{\fontsize{10.2}{12}\selectfont\textbf{#1}}\hspace{0.5em}{\fontsize{8.6}{10}\selectfont\textit{#2}}\hfill\meta{#3}\par}
+% \skill{Label}{items}
+\newcommand{\skill}[2]{\textbf{#1:} #2\par\vspace{1pt}}
+
+\begin{document}
+
+% ---------- header ----------------------------------------------------------
+\begin{center}
+  {\fontsize{16.5}{20}\selectfont\bfseries\spaced[90]{YOUR NAME}}\\[2pt]
+  \meta{\weblink{mailto:you@university.edu}{you@university.edu}\ \ |\ \ \weblink{https://yourwebsite.com}{yourwebsite.com}\ \ |\ \ \weblink{https://github.com/yourusername}{github.com/yourusername}}
+\end{center}
+\vspace{-6pt}
+
+\section{Research Interests}
+I study how to (one sentence on the big question you care about), drawing on (two or three fields). I build (what you make: benchmarks, systems, models) that test (the specific problems). I am also interested in (one adjacent direction you want to explore in grad school).\par
+
+\section{Academic}
+\entry{University Name}{City, ST}{M.S. in Your Field}{Aug. 2025 -- Present}
+\begin{itemize}\item GPA: 4.0/4.0\end{itemize}
+\entry{University Name}{City, ST}{B.S. in Your Major, Minor in Your Minor, Certificate}{Aug. 2021 -- May 2025}
+\begin{itemize}\item GPA: 3.9/4.0, Summa Cum Laude\end{itemize}
+
+\section{Publications}
+\subsection{Journal Articles}
+\pub{J1}{A. Coauthor, \me{Your Name}, B. Coauthor, et al. Paper Title in Title Case. \textit{Journal Name (Publisher)}, 2025.}
+\subsection{Conference, Workshop \& Demo Papers}
+\pub{C2}{\me{Your Name}, A. Coauthor, B. Coauthor, et al. Paper Title in Title Case. \textit{VENUE (Track)}, 2026.}
+\pub{C1}{A. Coauthor, \me{Your Name}, B. Coauthor, et al. Paper Title in Title Case. \textit{VENUE}, 2025. (Best Paper)}
+\subsection{Preprints \& Under Review}
+\pub{P1}{\me{Your Name}, A. Coauthor, B. Coauthor, et al. Paper Title in Title Case. \textit{arXiv:0000.00000}, 2026.}
+\subsection{Thesis}
+\hangindent=2.2em\hangafter=1\me{Your Name}. Thesis Title in Title Case. \textit{Undergraduate Thesis, University Name}, 2025.\par
+
+\section{Professional Experience}
+\entry{Company Name}{City, ST}{Incoming Research Intern}{Jan. 2027 -- Apr. 2027}
+\begin{itemize}\item One line on what you will work on and who you report to\end{itemize}
+\entry{Research Lab, Group Name}{City, ST}{Research Intern}{May 2025 -- Apr. 2026}
+\mentors{Mentor: Dr. First Last, Dr. First Last}
+\begin{itemize}
+  \item First-author of a benchmark or system, with one concrete number
+  \item Co-author of a second project, with a measure of impact (users, stars, citations)
+  \item One more result, in one line
+\end{itemize}
+\entry{University Name, Lab or Institute}{City, ST}{Research Assistant}{Aug. 2023 -- May 2026}
+\mentors{Mentor: Dr. First Last}
+\begin{itemize}
+  \item What you researched, in plain words
+  \item What you built or optimized
+\end{itemize}
+
+\section{Leadership}
+\entry{Student Organization}{City, ST}{President (Apr. 2024 -- May 2026); Workshop Director (Apr. 2023 -- Apr. 2024)}{Apr. 2023 -- May 2026}
+\begin{itemize}
+  \item Size of the team you led and who you partnered with
+  \item Money raised or members grown, with numbers
+  \item An award the organization won
+\end{itemize}
+\entry{Club Name}{City, ST}{Co-Founder}{Aug. 2024 -- Present}
+\begin{itemize}\item What you started and why it matters\end{itemize}
+
+\section{Presentations and Posters}
+\subsection{Talks}
+\dated{\textbf{[T2]} Talk Title, \textbf{Event or Host, University} (Invited speaker)}{2026}
+\dated{\textbf{[T1]} Talk Title, \textbf{Event or Host, University} (Guest talk)}{2025}
+\subsection{Workshops}
+\dated{\textbf{[W1]} Workshop Title, \textbf{Student Organization, University}}{2024}
+\subsection{Posters}
+\dated{\textbf{[PS2]} Poster title, \textbf{Symposium 2026; Conference 2025}}{2025 -- 2026}
+\dated{\textbf{[PS1]} Poster title, \textbf{Research Symposium 2024}}{2024}
+
+\section{Technical Skills}
+\skill{Programming \& AI/ML}{Python, JavaScript, C++, SQL, PyTorch, TensorFlow, scikit-learn}
+\skill{Frameworks \& Tools}{React, Node.js, Docker, REST APIs, Linux}
+\skill{Certifications}{Certification Name (Code), Certification Name (Code)}
+\skill{Languages}{English (Fluent), Spanish (Conversational)}
+
+\section{Select Projects}
+\project{Project One}{Python, FastAPI, Docker}{2026}
+\begin{itemize}\item One line on what it does and who uses it\end{itemize}
+\project{Project Two}{TypeScript, React}{2025}
+\begin{itemize}\item One line, with a result (stars, users, a prize)\end{itemize}
+
+\section{Honors and Awards}
+\dated{\textbf{Fellowship or Award Name}: One line on what it is or how selective}{2026}
+\dated{Award Name: 1 of N selected}{2025}
+\dated{Dean's List: All semesters}{2021 -- 2025}
+
+\section{Hackathons and Competitions}
+\dated{Hackathon Name, \textbf{1st Place Overall} for what you built}{2025}
+\dated{Competition Name, Best Visualization for what you analyzed}{2024}
+
+\section{Select Media Coverage}
+\dated{\weblink{https://example.com}{Outlet Name}, ``Article Headline About You''}{2026}
+\dated{\weblink{https://example.com}{Department News}, ``Article Headline About You''}{2025}
+
+\section{Service}
+\subsection{Reviewing}
+\dated{Reviewer, \textbf{VENUE} (Organization)}{2025}
+\subsection{Organizing}
+\dated{Lead Organizer, \textbf{Event Name}, Host Organization}{2026}
+\subsection{Mentoring}
+\dated{Mentee Name, Undergraduate Student, Major}{2025 -- Present}
+
+\section{Grants and Funding}
+\dated{Fellowship Name, \textbf{\$00,000} for what it funds}{2026}
+\dated{Scholarship Name, \textbf{\$0,000} for what it funds}{2024}
+\dated{Travel Award, \textbf{\$000} for presenting at a conference}{2025}
+
+\section{Misc and Hobbies}
+A few things you do outside research, in one or two sentences (what you cook, read, train for, or are learning).
+
+\section{References}
+\begin{minipage}[t]{0.32\linewidth}\textbf{Dr. First Last}\\Professor\\University Name\\\weblink{https://university.edu}{university.edu/people/first-last}\end{minipage}\hfill
+\begin{minipage}[t]{0.32\linewidth}\textbf{Dr. First Last}\\Senior Researcher\\Company Name\\\weblink{https://website.com}{website.com}\end{minipage}\hfill
+\begin{minipage}[t]{0.32\linewidth}\textbf{Dr. First Last}\\Associate Professor\\University Name\\\weblink{https://university.edu}{university.edu/people/first-last}\end{minipage}
+
+\end{document}
