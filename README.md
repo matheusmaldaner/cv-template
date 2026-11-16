@@ -1,6 +1,10 @@
 # Resume
 
-The academic CV template I used for PhD applications in CS, HCI and ML. Pick whichever way you like to edit.
+[![GitHub stars](https://img.shields.io/github/stars/matheusmaldaner/cv-template?style=social)](https://github.com/matheusmaldaner/cv-template/stargazers)
+
+Hi, I'm Matheus, an NSF GRFP Fellow and AI researcher at the University of Florida (Microsoft AI Frontiers, Carnegie Mellon). This is the CV format I've used for my fellowship and PhD applications. Pick whichever way you like to edit it.
+
+⭐ Star the repo to get updates: I'm adding conferences and programs to apply to, and tips on personal statements.
 
 | | How |
 |---|---|
@@ -28,15 +32,10 @@ https://raw.githubusercontent.com/matheusmaldaner/cv-template/main/agent/resume.
 7. Show me the result and ask what to change.
 ```
 
-## Tips
-
-- Research first: interests, education, publications, then experience. Trim to 2 to 3 pages for PhD applications.
-- One line per bullet, and lead with a number when you have one.
-- Bold your name in every author list so readers find you fast.
-
 ## Coming soon
 
 - Conferences and programs I recommend applying to
+- Tips on writing personal statements
 
 Made by [Matheus Kunzler Maldaner](https://matheus.wiki) ([X](https://x.com/matheusmaldaner), [Instagram](https://instagram.com/matheusresearch), [TikTok](https://www.tiktok.com/@matheusresearch)). Suggestions welcome, open an issue.
 
