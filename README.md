@@ -38,6 +38,6 @@ https://raw.githubusercontent.com/matheusmaldaner/cv-template/main/agent/resume.
 
 - Conferences and programs I recommend applying to
 
-Made by [Matheus Kunzler Maldaner](https://matheus.wiki) ([X](https://x.com/matheusmaldaner), [Instagram](https://instagram.com/matheusresearch)). Suggestions welcome, open an issue.
+Made by [Matheus Kunzler Maldaner](https://matheus.wiki) ([X](https://x.com/matheusmaldaner), [Instagram](https://instagram.com/matheusresearch), [TikTok](https://www.tiktok.com/@matheusresearch)). Suggestions welcome, open an issue.
 
 MIT License
