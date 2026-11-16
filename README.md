@@ -4,7 +4,7 @@
 
 Hi, I'm Matheus, an NSF GRFP Fellow and AI researcher at the University of Florida (Microsoft AI Frontiers, Carnegie Mellon). This is the CV format I've used for my fellowship and PhD applications. Pick whichever way you like to edit it.
 
-⭐ Star the repo to get updates: I'm adding conferences and programs to apply to, and tips on personal statements.
+⭐ Hit Star (top right) to get updates: I'm adding conferences and programs to apply to, and tips on personal statements.
 
 | | How |
 |---|---|
