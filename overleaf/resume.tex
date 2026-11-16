@@ -2,12 +2,13 @@
 % Replace the placeholder text, delete the sections you do not need.
 % Tip: keep one line per bullet and one fact per line.
 
+\RequirePackage{fix-cm} % any font size, no size-substitution warnings
 \documentclass[10pt,letterpaper]{article}
 
 \usepackage[T1]{fontenc}
 % Gelasio is a free font metric-compatible with Georgia (on Overleaf by default);
 % older TeX installs without it fall back to Charter
-\IfFileExists{gelasio.sty}{\usepackage[osf]{gelasio}}{\usepackage[osf]{XCharter}}
+\IfFileExists{gelasio.sty}{\usepackage{gelasio}}{\usepackage{XCharter}}
 \usepackage[margin=0.45in]{geometry}
 \usepackage[hidelinks]{hyperref}
 \usepackage{xcolor}
